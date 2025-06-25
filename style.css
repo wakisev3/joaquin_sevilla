@@ -1,0 +1,98 @@
+/* Minimalist Academic Website */
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  color: #222;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+header {
+  text-align: center;
+  margin: 3rem 0 2rem 0;
+}
+
+h1 {
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin: 0;
+  letter-spacing: 0.02em;
+}
+
+.subtitle {
+  color: #888;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #666;
+  font-weight: 500;
+  padding-bottom: 0.25rem;
+  border-bottom: 1px solid transparent;
+  transition: border 0.2s;
+}
+
+nav a:hover, nav a:focus {
+  color: #111;
+  border-bottom: 1px solid #111;
+}
+
+main {
+  max-width: 540px;
+  margin: 0 auto 4rem auto;
+  padding: 0 1rem;
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+h2 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 2rem 0 0.5rem 0;
+  letter-spacing: 0.01em;
+  color: #222;
+}
+
+ul {
+  padding-left: 1.2rem;
+}
+
+a {
+  color: #3366cc;
+  text-decoration: none;
+}
+
+a:hover, a:focus {
+  text-decoration: underline;
+}
+
+footer {
+  text-align: center;
+  color: #bbb;
+  font-size: 0.9rem;
+  padding: 2rem 0 1rem 0;
+}
+
+@media (max-width: 600px) {
+  main {
+    padding: 0 0.5rem;
+  }
+  nav {
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+}
