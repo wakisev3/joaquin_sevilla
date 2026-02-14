@@ -1,41 +1,117 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Joaquin Sevilla</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="index.html">Joaquin Sevilla</a>
-      <nav class="main-nav" aria-label="Main navigation">
-        <a href="writing.html">Research</a>
-        <a href="public_goods.html">Public Goods</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-    </div>
-  </header>
-  <main class="hero">
-    <div class="container hero-content">
-      <div class="hero-text">
-        <h1>Welcome!</h1>
-        <p class="lead">I am Joaquin Sevilla, a graduate student, research assistant, and teaching assistant at the Department of Economics, De La Salle University - Manila. My research interests span international trade, spatial economics, and applied econometrics.</p>
-        <p class="cta">
-          <a class="btn ghost" href="writing.html">Projects</a>
-        </p>
-      </div>
-      <div class="hero-image">
-        <img src="images/profile.jpg" alt="Joaquin with parrots" class="profile-photo">
-        <p class="photo-caption">With Parrots at the Manila Zoo!</p>
-      </div>
-    </div>
-  </main>
-  <footer class="site-footer">
-    <div class="container">
-      <small>&copy; 2025 Joaquin Sevilla — <a href="contact.html">Contact</a> — <a href="https://github.com/wakisev3" target="_blank" rel="noopener">GitHub</a></small>
-    </div>
-  </footer>
-</body>
-</html>
+:root{
+  --bg:#fafafa;
+  --card:#ffffff;
+  --muted:#6b7280;
+  --accent:#007a3d;
+  --accent-dark:#005a2d;
+  --max-width:1000px;
+  --radius:8px;
+  --mono: Helvetica, Arial, sans-serif;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:var(--mono);background:var(--bg);color:#111}
+.container{max-width:var(--max-width);margin:0 auto;padding:24px}
+.header-inner{display:flex;align-items:center;justify-content:space-between}
+.site-header{background:linear-gradient(90deg, #ffffffcc, #ffffffcc);border-bottom:1px solid #e6e6e6}
+.brand{font-weight:700;color:var(--accent);text-decoration:none;font-size:1.15rem}
+.main-nav a{margin-left:16px;color:#111;text-decoration:none;padding:8px;border-radius:6px}
+.main-nav a[aria-current="page"]{background:#f3f4f6}
+.hero{padding:60px 0;background:linear-gradient(180deg,#ffffff, #f8fbff)}
+.hero h1{margin:0 0 8px;font-size:2rem}
+.lead{margin:0 0 16px;color:var(--muted)}
+.cta .btn{display:inline-block;padding:10px 16px;border-radius:8px;background:var(--accent);color:#fff;text-decoration:none;margin-right:8px}
+.cta .btn.ghost{background:transparent;color:var(--accent);border:1px solid #dbeafe}
+.content{padding:36px 24px;background:transparent}
+.content h1{margin-top:0}
+.publications{padding-left:1rem}
+.publications li{margin:12px 0}
+.site-footer{border-top:1px solid #eaeaea;padding:16px 0;background:transparent;color:var(--muted);text-align:center}
+@media (max-width:600px){
+  .header-inner{flex-direction:row;gap:8px}
+  .main-nav{display:flex;flex:1;justify-content:flex-end}
+  .hero{padding:36px 0}
+  .container{padding:16px}
+}
+/* Small utility */
+.btn{transition:background .12s ease}
+.btn:hover{background:var(--accent-dark)}
+/* Project title and description styles */
+.project-title {
+  font-weight: bold;
+  color: #000;
+}
+.project-title-link {
+  font-weight: bold;
+  color: var(--accent);
+  text-decoration: none;
+}
+.project-title-link:hover {
+  text-decoration: underline;
+}
+.project-description {
+  color: var(--muted);
+  margin-top: 0.5em;
+  margin-bottom: 1em;
+}
+/* Publication header container */
+.publication-header {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5em;
+  flex-wrap: wrap;
+}
+/* Toggle button for abstracts */
+.toggle-description {
+  background: none;
+  border: none;
+  color: var(--accent);
+  cursor: pointer;
+  font-size: 0.9em;
+  padding: 0;
+  text-decoration: underline;
+  font-family: inherit;
+}
+.toggle-description:hover {
+  color: var(--accent-dark);
+}
+.toggle-description:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+/* Hero photo layout */
+.hero-content {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+.hero-text {
+  flex: 1;
+}
+.hero-image {
+  flex-shrink: 0;
+  text-align: center;
+}
+.profile-photo {
+  width: 280px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.photo-caption {
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+  font-style: italic;
+}
+@media (max-width:768px){
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .profile-photo {
+    width: 220px;
+    height: 220px;
+  }
+}
