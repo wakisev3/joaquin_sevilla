@@ -1,77 +1,88 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Writing — Joaquin Sevilla</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="index.html">Joaquin Sevilla</a>
-      <nav class="main-nav" aria-label="Main navigation">
-        <a href="writing.html" aria-current="page">Research</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-    </div>
-  </header>
-  <main class="container content">
-    <article>
-      <h1>Research</h1>
-      <p>Most of my current work uses longitudinal plant- and product- level data to examine the role of trade and trade policy in determining firm-level outcomes.</p>
-      <ul class="publications">
-        <li>
-          <div class="publication-header">
-            <span class="project-title">Firms and Place-Based Policy: Evidence from Special Economic Zones in the Philippines.</span> <em>Working Paper.</em>
-            <button class="toggle-description" aria-expanded="false">Show abstract</button>
-          </div>
-          <p class="project-description" hidden>Using twenty years of manufacturing plant-level data merged with information on a firm's location and special economic zone (SEZ) status, I provide the first causal evaluation of Philippine SEZ policy at the firm-level. I embed SEZs in a Melitz-type partial equilibrium model and examine the hypothesized effects of SEZs at the firm-level. Using both quasi-experimental and endogenous switching approaches I find that SEZs positively affect firm size and productivity, albeit treatment effects are highly heterogeneous. Estimates from endogenous switching regressions show that firms less likely to select into SEZs are also less likely to benefit. Furthermore, the benefits of SEZs do not seem to spillover to non-registered firms within the same neighborhood. Finally, firms in publicly governed SEZs are 60 percent less productive compared to their counterparts in private zones.</p>
-        </li>
-        <li>
-          <div class="publication-header">
-            <span class="project-title">No Change, No Gain: Exporting, Diversification, and Firm Growth in the Philippines</span>, (with Jesus Felipe and Nanditha Mathew). <em>Working Paper.</em>
-            <button class="toggle-description" aria-expanded="false">Show abstract</button>
-          </div>
-          <p class="project-description" hidden>We merge manufacturing plant-level data with the universe of firm-product-level export transactions in the Philippines to measure the effects of exporting and export diversification on firm-level outcomes. We measure these effects through switching regressions and an exclusion restriction strategy that correct for selection into exporting and diversification. Overall, we find no evidence of that exporting is growth-enhancing, while diversification positively impacts output and employment, but has no impact on productivity.</p>
-        </li>
-        <li>
-          <a href="https://www.dlsu-aki.com/uploads/1/0/2/2/102266760/1000_largest_philippine_firms_wp_may_26.pdf" target="_blank" rel="noopener" class="project-title-link">
-            A Profile of the Largest 1,000 Firms in the Philippines and the Manufacturing Sector
-          </a>, (with Jesus Felipe and Nanditha Mathew). <em>AKI Working Paper Series</em>, 2025.
-        </li>
-        <li>
-          <a href="https://www.dlsu-aki.com/uploads/1/0/2/2/102266760/dlsu-aki_policy_brief_2024-11-046.pdf" target="_blank" rel="noopener" class="project-title-link">
-            The IMF-World Bank Meetings and their Recommendations for Asia: an Assessment
-          </a>, (with Jesus Felipe). <em>AKI Policy Briefs</em>, 2024.
-        </li>
-      </ul>
-    </article>
-  </main>
-  <footer class="site-footer">
-    <div class="container">
-      <small>&copy; 2025 Joaquin Sevilla</small>
-    </div>
-  </footer>
+:root{
+  --bg:#fafafa;
+  --card:#ffffff;
+  --muted:#6b7280;
+  --accent:#007a3d;
+  --accent-dark:#005a2d;
+  --max-width:1000px;
+  --radius:8px;
+  --mono: Palatino, "Palatino Linotype", "Book Antiqua", Georgia, serif;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:var(--mono);background:var(--bg);color:#111}
+.container{max-width:var(--max-width);margin:0 auto;padding:24px}
+.header-inner{display:flex;align-items:center;justify-content:space-between}
+.site-header{background:linear-gradient(90deg, #ffffffcc, #ffffffcc);border-bottom:1px solid #e6e6e6}
+.brand{font-weight:700;color:var(--accent);text-decoration:none;font-size:1.15rem}
+.main-nav a{margin-left:16px;color:#111;text-decoration:none;padding:8px;border-radius:6px}
+.main-nav a[aria-current="page"]{background:#f3f4f6}
+.hero{padding:60px 0;background:linear-gradient(180deg,#ffffff, #f8fbff)}
+.hero h1{margin:0 0 8px;font-size:2rem}
+.lead{margin:0 0 16px;color:var(--muted)}
+.cta .btn{display:inline-block;padding:10px 16px;border-radius:8px;background:var(--accent);color:#fff;text-decoration:none;margin-right:8px}
+.cta .btn.ghost{background:transparent;color:var(--accent);border:1px solid #dbeafe}
+.content{padding:36px 24px;background:transparent}
+.content h1{margin-top:0}
+.publications{padding-left:1rem}
+.publications li{margin:12px 0}
+.site-footer{border-top:1px solid #eaeaea;padding:16px 0;background:transparent;color:var(--muted);text-align:center}
+@media (max-width:600px){
+  .header-inner{flex-direction:row;gap:8px}
+  .main-nav{display:flex;flex:1;justify-content:flex-end}
+  .hero{padding:36px 0}
+  .container{padding:16px}
+}
+/* Small utility */
+.btn{transition:background .12s ease}
+.btn:hover{background:var(--accent-dark)}
 
-  <script>
-    // Toggle description visibility
-    document.querySelectorAll('.toggle-description').forEach(button => {
-      button.addEventListener('click', function() {
-        const description = this.parentElement.nextElementSibling;
-        const isHidden = description.hasAttribute('hidden');
-        
-        if (isHidden) {
-          description.removeAttribute('hidden');
-          this.textContent = 'Hide abstract';
-          this.setAttribute('aria-expanded', 'true');
-        } else {
-          description.setAttribute('hidden', '');
-          this.textContent = 'Show abstract';
-          this.setAttribute('aria-expanded', 'false');
-        }
-      });
-    });
-  </script>
-</body>
-</html>
+/* Project title and description styles */
+.project-title {
+  font-weight: bold;
+  color: #000;
+}
+
+.project-title-link {
+  font-weight: bold;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.project-title-link:hover {
+  text-decoration: underline;
+}
+
+.project-description {
+  color: var(--muted);
+  margin-top: 0.5em;
+  margin-bottom: 1em;
+}
+
+/* Publication header container */
+.publication-header {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5em;
+  flex-wrap: wrap;
+}
+
+/* Toggle button for abstracts */
+.toggle-description {
+  background: none;
+  border: none;
+  color: var(--accent);
+  cursor: pointer;
+  font-size: 0.9em;
+  padding: 0;
+  text-decoration: underline;
+  font-family: inherit;
+}
+
+.toggle-description:hover {
+  color: var(--accent-dark);
+}
+
+.toggle-description:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
