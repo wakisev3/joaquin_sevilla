@@ -6,7 +6,7 @@
   --accent-dark:#005a2d;
   --max-width:1000px;
   --radius:8px;
-  --mono: Palatino, "Palatino Linotype", "Book Antiqua", Georgia, serif;
+  --mono: Helvetica, Arial, sans-serif;
 }
 *{box-sizing:border-box}
 html,body{height:100%;margin:0;font-family:var(--mono);background:var(--bg);color:#111}
