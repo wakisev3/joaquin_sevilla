@@ -2,11 +2,11 @@
   --bg:#fafafa;
   --card:#ffffff;
   --muted:#6b7280;
-  --accent:#0b74de;
-  --accent-dark:#095bb5;
+  --accent:#007a3d;
+  --accent-dark:#005a2d;
   --max-width:1000px;
   --radius:8px;
-  --mono: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --mono: Palatino, "Palatino Linotype", "Book Antiqua", Georgia, serif;
 }
 *{box-sizing:border-box}
 html,body{height:100%;margin:0;font-family:var(--mono);background:var(--bg);color:#111}
