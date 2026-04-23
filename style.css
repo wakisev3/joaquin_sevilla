@@ -122,6 +122,24 @@ html, body {
 .main a { color: var(--accent); text-decoration: none; }
 .main a:hover { text-decoration: underline; }
 
+/* ── Home figure ── */
+.home-figure {
+  margin-top: 28px;
+}
+
+.home-figure img {
+  width: 100%;
+  border-radius: 4px;
+  display: block;
+}
+
+.home-figure figcaption {
+  margin-top: 8px;
+  font-size: 0.82rem;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
 /* ── Publications ── */
 .publications {
   list-style: decimal;
