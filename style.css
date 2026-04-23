@@ -167,16 +167,16 @@ details > summary {
 }
 details > summary::-webkit-details-marker { display: none; }
 
-details > summary::before {
-  content: "▶";
+details > summary::after {
+  content: " ▶";
   display: inline-block;
   font-size: 0.6em;
-  margin-right: 0.45em;
+  margin-left: 0.3em;
   color: var(--muted);
   vertical-align: middle;
   transition: transform 0.15s ease;
 }
-details[open] > summary::before {
+details[open] > summary::after {
   transform: rotate(90deg);
 }
 
