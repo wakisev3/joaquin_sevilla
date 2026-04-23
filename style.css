@@ -125,6 +125,7 @@ html, body {
 /* ── Home figure ── */
 .home-figure {
   margin-top: 28px;
+  max-width: 420px;
 }
 
 .home-figure img {
